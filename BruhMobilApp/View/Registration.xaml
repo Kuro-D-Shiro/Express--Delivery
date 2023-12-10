@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BruhMobilApp.RegistrationPage">
+    <AbsoluteLayout>
+        <Label Text="Регистрация учётной записи" FontSize="30" FontAttributes="Bold" TextColor="Black" 
+               AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.7, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.725, 0.475" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="50">
+            <StackLayout>
+                <Entry x:Name="RegistrationEmail" IsPassword="False" Placeholder="Введите электронную почту"/>
+                <Entry x:Name="RegistrationNumber" IsPassword="False" Placeholder="Введите номер телефона"/>
+                <Entry x:Name="RegistrationUsersName" IsPassword="False" Placeholder="Введите имя пользователя"/>
+                <Entry x:Name="RegistrationPassword" IsPassword="True" Placeholder="Введите пароль"/>
+                <Entry x:Name="RegistrationConfirmPassword" IsPassword="True" Placeholder="Подтвердите пароль"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Я курьер" FontAttributes="Bold" TextColor="Black"/>
+                    <Switch x:Name="IsDeliverman" OnColor="#20B2AA" ThumbColor="#008B8B"/>
+                </StackLayout>
+                <Button x:Name="LogIn" Text="Зарегисрироваться" CornerRadius="20" />
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>

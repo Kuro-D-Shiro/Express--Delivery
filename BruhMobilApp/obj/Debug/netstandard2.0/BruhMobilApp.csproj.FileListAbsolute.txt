@@ -1,0 +1,16 @@
+D:\ПИ\BruhMobilApp\BruhMobilApp\bin\Debug\netstandard2.0\BruhMobilApp.deps.json
+D:\ПИ\BruhMobilApp\BruhMobilApp\bin\Debug\netstandard2.0\BruhMobilApp.dll
+D:\ПИ\BruhMobilApp\BruhMobilApp\bin\Debug\netstandard2.0\BruhMobilApp.pdb
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.csproj.AssemblyReference.cache
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.AssemblyInfoInputs.cache
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.AssemblyInfo.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.csproj.CoreCompileInputs.cache
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\XamlC.stamp
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.dll
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\refint\BruhMobilApp.dll
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\BruhMobilApp.pdb
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\ref\BruhMobilApp.dll
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\LogIn.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Registration.xaml.g.cs
