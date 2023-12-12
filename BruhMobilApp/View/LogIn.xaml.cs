@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BruhMobilApp.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -26,7 +27,8 @@ namespace BruhMobilApp
         private async void PasswordRecovery_Clicked(object sender, EventArgs e)
         {
             //хз тут как-то логику посылания пароля нужно осуществить
-            await DisplayAlert("Уведомление.", "Ваш пароль пришёл вам на электронную почту.", "ОК");
+            await Navigation.PushModalAsync(new PassowrdRecovery());
+            //await DisplayAlert("Уведомление.", "Ваш пароль пришёл вам на электронную почту.", "ОК");
         }
     }
 }
