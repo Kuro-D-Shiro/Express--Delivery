@@ -27,7 +27,7 @@ namespace BruhMobilApp
         private async void PasswordRecovery_Clicked(object sender, EventArgs e)
         {
             //хз тут как-то логику посылания пароля нужно осуществить
-            await Navigation.PushModalAsync(new PassowrdRecovery());
+            await Navigation.PushModalAsync(new PasswordRecovery());
             //await DisplayAlert("Уведомление.", "Ваш пароль пришёл вам на электронную почту.", "ОК");
         }
     }

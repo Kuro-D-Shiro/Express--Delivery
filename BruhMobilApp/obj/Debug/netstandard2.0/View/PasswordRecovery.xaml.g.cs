@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BruhMobilApp.View.PassowrdRecovery.xaml", "View/PassowrdRecovery.xaml", typeof(global::BruhMobilApp.View.PassowrdRecovery))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BruhMobilApp.View.PasswordRecovery.xaml", "View/PasswordRecovery.xaml", typeof(global::BruhMobilApp.View.PasswordRecovery))]
 
 namespace BruhMobilApp.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\PassowrdRecovery.xaml")]
-    public partial class PassowrdRecovery : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\PasswordRecovery.xaml")]
+    public partial class PasswordRecovery : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry ReadEmail;
@@ -24,7 +24,7 @@ namespace BruhMobilApp.View {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PassowrdRecovery));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PasswordRecovery));
             ReadEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "ReadEmail");
             GoToTheRegistrationPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "GoToTheRegistrationPage");
         }
