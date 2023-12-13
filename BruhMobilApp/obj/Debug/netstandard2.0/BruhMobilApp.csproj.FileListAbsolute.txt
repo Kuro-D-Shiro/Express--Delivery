@@ -15,3 +15,4 @@ D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\ref\BruhMobilApp.dll
 D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\LogIn.xaml.g.cs
 D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Registration.xaml.g.cs
 D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\PasswordRecovery.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Deliveryman_OrderSelection.xaml.g.cs

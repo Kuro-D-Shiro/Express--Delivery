@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BruhMobilApp.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace BruhMobilApp
         {
             InitializeComponent();
 
-            MainPage = new LogInPage();
+            MainPage = new Deliveryman_OrderSelection();
         }
 
         protected override void OnStart()
