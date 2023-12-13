@@ -28,7 +28,7 @@ namespace BruhMobilApp.View
             btn.Text = ""; //здесь будет начальная и конечная точки доставки
             btn.CornerRadius = 15;
             btn.Clicked += GoToTheOrderPage;
-            
+            ListOfOrders.Children.Add(btn);
         }
 
         private void GoToTheOrderPage(object sender, EventArgs e)

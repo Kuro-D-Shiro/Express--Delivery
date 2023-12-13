@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BruhMobilApp.View.Deliveryman_PackagePage">
+    <AbsoluteLayout>
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.05, 0.9, 0.4" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="20">
+            <StackLayout>
+                <Label x:Name="StartAdress" Text="Откуда: " FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                <Label x:Name="FinishAdress" Text="Куда: " FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                <Label x:Name="RemainingTime" Text="Времени осталось: " FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                <Label Text="Комментарий заказчика: " FontSize="20" TextColor="Black" Margin="0, 20, 0, 0"/>
+                <Frame HeightRequest="100" CornerRadius="20">
+                    <ScrollView>
+                        <Label x:Name="CustomersComment" TextColor="Black"/>
+                    </ScrollView>
+                </Frame>
+            </StackLayout>
+        </Frame>
+        <!--<WebView AbsoluteLayout.LayoutBounds="0.5, 0.8, 0.9, 0.4" AbsoluteLayout.LayoutFlags="All" Source="https://yandex.ru/maps/44/izhevsk/"/>-->
+        <Button Text="Открыть карту Ижевска" AbsoluteLayout.LayoutBounds="0.5, 0.53, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080"/>
+        <Button Text="Заказчик забрал посылку" AbsoluteLayout.LayoutBounds="0.5, 0.965, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080"/>
+    </AbsoluteLayout>
+</ContentPage>
