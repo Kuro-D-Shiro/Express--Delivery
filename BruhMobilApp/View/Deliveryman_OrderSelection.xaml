@@ -5,10 +5,13 @@
     <AbsoluteLayout>
         <Label Text="Выберите заказ" FontSize="30" FontAttributes="Bold" TextColor="Black" 
                AbsoluteLayout.LayoutBounds="0.5, 0.01, 0.7, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
-        <ScrollView BackgroundColor="#008080" AbsoluteLayout.LayoutBounds="1, 1, 1, 0.93" AbsoluteLayout.LayoutFlags="All">
-            <StackLayout>
-               
-            </StackLayout>
-        </ScrollView>
+        <Frame BackgroundColor="#008080" AbsoluteLayout.LayoutBounds="1, 1, 1, 0.93" AbsoluteLayout.LayoutFlags="All" CornerRadius="20">
+            <ScrollView>
+                <StackLayout x:Name="ListOfOrders">
+                    
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+        <BoxView AbsoluteLayout.LayoutBounds="1, 1, 1, 0.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080"/>
     </AbsoluteLayout>
 </ContentPage>

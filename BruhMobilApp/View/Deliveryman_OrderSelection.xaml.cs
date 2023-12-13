@@ -16,5 +16,24 @@ namespace BruhMobilApp.View
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
+
+        public void AddNewPackageInPage() // в дальнейшем в метод должен принимать объект типа Package
+        {
+            Button btn = new Button();
+            btn.Text = ""; //здесь будет начальная и конечная точки доставки
+            btn.CornerRadius = 15;
+            btn.Clicked += GoToTheOrderPage;
+            
+        }
+
+        private void GoToTheOrderPage(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
