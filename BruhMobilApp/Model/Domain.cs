@@ -13,7 +13,13 @@ namespace BruhMobilApp.Model
 
     public class Deliverman : User
     {
+        private List<Package> Packages { get; set; }
+        public string Status { get; set; }
 
+        public Deliverman() 
+        {
+            Packages = new List<Package>();
+        }
     }
     public class Customer : User
     {
