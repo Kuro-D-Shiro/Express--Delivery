@@ -23,7 +23,12 @@ namespace BruhMobilApp.Model
     }
     public class Customer : User
     {
+        private List<Package> Packages { get; set; }
 
+        public Customer()
+        {
+            Packages = new List<Package>();
+        }
     }
     public class Package
     {
