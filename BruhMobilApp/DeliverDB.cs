@@ -28,5 +28,17 @@ namespace BruhMobilApp
 
         public MySqlConnection getConnection() {  return connection; }
 
+        public void AddUser()
+        {
+
+        }
+        public void RemoveUsers()
+        {
+
+        }
+        public void UpdateUser()
+        {
+
+        }
     }
 }
