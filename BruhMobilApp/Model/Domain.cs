@@ -21,6 +21,9 @@ namespace BruhMobilApp.Model
     }
     public class Package
     {
-
+        public int Id { get; set; }
+        public string StartAddress { get; set; }
+        public string EndAddress { get; set; }
+        public string Commit { get; set; }
     }
 }
