@@ -40,5 +40,17 @@ namespace BruhMobilApp
         {
 
         }
+        public void AddPackege()
+        {
+
+        }
+        public void RemovePachage()
+        {
+
+        }
+        public void UpdatePackage()
+        {
+
+        }
     }
 }
