@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BruhMobilApp.Model
@@ -12,6 +13,18 @@ namespace BruhMobilApp.Model
         public string Password { get; set; }
         public string Number { get; set; }
         public string Role { get; set; }
+        public User(int id, string name, string email, string passowrd, string number, string role) 
+        {
+            Id = id;
+            Name = name;
+            if (email.Contains("@")) Email = email;
+            else throw new Exception($"Wrong email {email}, must contains @");
+            Password = passowrd;
+            if (number.All(char.IsDigit)) Number = number;
+            else throw new Exception($"Wrong number {number}, must contains only digits");
+            if (role == "deliverman" || role == "customer") Role = role;
+            else throw new Exception($"Wrong role {role}, must be deliverman or customer");
+        }
     }
 
     public class Deliverman : User
