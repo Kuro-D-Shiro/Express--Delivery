@@ -50,17 +50,17 @@ namespace BruhMobilApp.Model
         private string number;
         private string role;
 
-        public User(string name, string email, string passowrd, string number, string role)
+        public User(string name, string email, string password, string number, string role)
         {
             Name = name;
             Email = email;
-            Password = passowrd;
+            Password = password;
             Number = number;
             Role = role;
         }
 
-        public User(string name, string email, string passowrd, string number, string role, List<Package> packages) :
-            this(name, email, passowrd, number, role)
+        public User(string name, string email, string password, string number, string role, List<Package> packages) :
+            this(name, email, password, number, role)
         {
             Packages = packages;
         }
@@ -79,8 +79,8 @@ namespace BruhMobilApp.Model
         }
         private string status;
 
-        public Deliverman(string name, string email, string passowrd, string number, string role, string status) :
-            base(name, email, passowrd, number, role)
+        public Deliverman(string name, string email, string password, string number, string role, string status) :
+            base(name, email, password, number, role)
         {
             Status = status;
         }
@@ -88,13 +88,13 @@ namespace BruhMobilApp.Model
     public class Customer : User
     {
         /* Просто дублирует конструкторы чтоб класс не пустой был*/
-        public Customer(string name, string email, string passowrd, string number, string role) :
-            base(name, email, passowrd, number, role)
+        public Customer(string name, string email, string password, string number, string role) :
+            base(name, email, password, number, role)
         { }
 
 
-        public Customer(string name, string email, string passowrd, string number, string role, List<Package> packages) :
-            base(name, email, passowrd, number, role, packages)
+        public Customer(string name, string email, string password, string number, string role, List<Package> packages) :
+            base(name, email, password, number, role, packages)
         { }
     }
     public class Package
