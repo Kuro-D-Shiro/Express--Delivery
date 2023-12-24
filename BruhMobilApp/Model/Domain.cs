@@ -127,7 +127,18 @@ namespace BruhMobilApp.Model
         }
         public DateTime Time { get; set; }
         public double Cost { get; set; }
-        public string Status {  get; set; }
+        public string Status{
+            get => Status;
+            set
+            {
+                var allowedStatus = new string[] { "wait", "delivered", "trasport", "rejected" };
+                if (allowedStatus.Contains(value))
+                    Status = value;
+                else 
+                    throw new Exception($"{value} is not allowed, mast be" +
+                        $" \"wait\", \"delivered\", \"trasport\", \"rejected\"");
+            }
+        }
 
         public Package(int id, string startAddress, string endAddress, string comment, string size, DateTime time)
         {
