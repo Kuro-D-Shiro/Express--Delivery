@@ -16,5 +16,10 @@ namespace BruhMobilApp.View
         {
             InitializeComponent();
         }
+
+        private void ChooseNewDeliveryButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

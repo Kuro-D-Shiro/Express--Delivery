@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BruhMobilApp.View.GoodJobPage">
     <AbsoluteLayout>
-        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.9, 0.6" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="20">
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.9, 0.65" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="20">
             <StackLayout >
-                <Image Source="Klass.png" Margin="0, 50, 0, 0"></Image>
+                <Image Source="Klass.png" Margin="0, 30, 0, 0"></Image>
                 <Label Text="Хорошая работа!" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="20"/>
                 <Label x:Name="SalaryText" Text="За эту доставку вы заработали " TextColor="White" Margin="0, 20, 0, 0" FontSize="17"/>
                 <Button x:Name="ChooseNewDeliveryButton" Text="Выбрать новый заказ" CornerRadius="20"
                         Margin="0, 20, 0, 0" Clicked="ChooseNewDeliveryButton_Clicked"/>
+                <Button x:Name="TPButton" Text="Обращение в службу поддержки" CornerRadius="20"
+                        Margin="0, 20, 0, 0" Clicked="TPButton_Clicked"/>
             </StackLayout>
         </Frame>
     </AbsoluteLayout>
