@@ -1,8 +1,7 @@
-﻿using MySql.Data.MySqlClient;
+﻿using BruhMobilApp.Model;
+using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Essentials;
+using System.Data;
 
 namespace BruhMobilApp
 {
@@ -40,6 +39,28 @@ namespace BruhMobilApp
         {
 
         }
+        public void ReadUser(string userName)
+        {
+            var command = new MySqlCommand($"SELECT * FROM `User` WHERE `name` = @userName", connection);
+            var adapter = new MySqlDataAdapter();
+            var table = new DataTable();
+
+            command.Parameters.Add("@userName", MySqlDbType.VarChar).Value = userName;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count == 0)
+            {
+                throw new Exception("Cant find a user in DataBase");
+            }
+            else
+            {
+                var row = table.Rows[0];
+                var id = row.Field<int>("ID");
+                var name = row.Field<string>("name");
+                var password = row.Field<string>("password");
+            }
+        }
+
         public void AddPackege()
         {
 
