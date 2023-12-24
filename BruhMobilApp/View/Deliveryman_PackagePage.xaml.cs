@@ -16,5 +16,20 @@ namespace BruhMobilApp.View
         {
             InitializeComponent();
         }
+
+        private void EndOfDeliveryButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CopyCustomerPhoneNumberButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MapButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

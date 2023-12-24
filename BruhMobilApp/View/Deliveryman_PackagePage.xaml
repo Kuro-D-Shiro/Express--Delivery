@@ -5,10 +5,10 @@
     <AbsoluteLayout>
         <Frame AbsoluteLayout.LayoutBounds="0.5, 0.05, 0.9, 0.4" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="20">
             <StackLayout>
-                <Label x:Name="StartAdress" Text="Откуда: " FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                <Label x:Name="FinishAdress" Text="Куда: " FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                <Label x:Name="RemainingTime" Text="Времени осталось: " FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                <Label Text="Комментарий заказчика: " FontSize="20" TextColor="Black" Margin="0, 20, 0, 0"/>
+                <Label x:Name="StartAdress" Text="Откуда: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                <Label x:Name="FinishAdress" Text="Куда: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                <Label x:Name="RemainingTime_Deliveryman" Text="Времени осталось: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                <Label Text="Комментарий заказчика: " FontSize="20" TextColor="White" Margin="0, 20, 0, 0"/>
                 <Frame HeightRequest="100" CornerRadius="20">
                     <ScrollView>
                         <Label x:Name="CustomersComment" TextColor="Black"/>
@@ -16,10 +16,15 @@
                 </Frame>
             </StackLayout>
         </Frame>
-        <!--<WebView AbsoluteLayout.LayoutBounds="0.5, 0.8, 0.9, 0.4" AbsoluteLayout.LayoutFlags="All" Source="https://yandex.ru/maps/44/izhevsk/"/>-->
-        <Button Text="Открыть карту Ижевска" AbsoluteLayout.LayoutBounds="0.5, 0.53, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
-                CornerRadius="20" BackgroundColor="#008080"/>
-        <Button Text="Заказчик забрал посылку" AbsoluteLayout.LayoutBounds="0.5, 0.965, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
-                CornerRadius="20" BackgroundColor="#008080"/>
+        <Button x:Name="MapButton" Text="Открыть карту Ижевска" AbsoluteLayout.LayoutBounds="0.5, 0.53, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="MapButton_Clicked"/>
+        <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.74, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All" Margin="0, 20, 0, 0" >
+            <Label Text="Номер заказчика:" TextColor="Black"  FontSize="25"/>
+            <Label Text="88005553535" TextColor="Black" FontSize="25"/>
+        </StackLayout>
+        <Button x:Name="CopyCustomerPhoneNumberButton" Text="📄" FontSize="40" AbsoluteLayout.LayoutBounds="0.9, 0.74, 0.3, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" Clicked="CopyCustomerPhoneNumberButton_Clicked"/>
+        <Button x:Name="EndOfDeliveryButton" Text="Заказчик забрал посылку" AbsoluteLayout.LayoutBounds="0.5, 0.965, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="EndOfDeliveryButton_Clicked"/>
     </AbsoluteLayout>
 </ContentPage>
