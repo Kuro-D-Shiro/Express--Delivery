@@ -11,11 +11,11 @@
                 <Entry x:Name="LiginingUsersName" IsPassword="False" Placeholder="Введите имя пользователя"/>
                 <Entry x:Name="LoginingPassword" IsPassword="True" Placeholder="Введите пароль"/>
                 <Button x:Name="LogInButton" Text="Войти" CornerRadius="20" Clicked="LogInButton_Clicked"/>
-                <Label Text="Нет учётной записи?" TextColor="Black" FontSize="14"/>
-                <Button x:Name="GoToTheRegistrationPage" Text="Зарегистрироваться" CornerRadius="20" BackgroundColor="#008080" BorderWidth="1" BorderColor="Wheat" Clicked="GoToTheRegistrationPage_Clicked"/>
+                <Label Text="Нет учётной записи?" TextColor="White" FontSize="14"/>
+                <Button x:Name="GoToTheRegistrationPage" Text="Зарегистрироваться" TextColor="White" CornerRadius="20" BackgroundColor="#008080" BorderWidth="1" BorderColor="White" Clicked="GoToTheRegistrationPage_Clicked"/>
             </StackLayout>
         </Frame>
-        <Button x:Name="PasswordRecovery" Text="Забыли пароль?" AbsoluteLayout.LayoutBounds="0.1, 1, 1, 0.05" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" Clicked="PasswordRecovery_Clicked"/>
-    </AbsoluteLayout> 
+        <Button x:Name="PasswordRecovery" Text="Забыли пароль?" TextColor="White" AbsoluteLayout.LayoutBounds="0.1, 1, 1, 0.05" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" Clicked="PasswordRecovery_Clicked"/>
+    </AbsoluteLayout>
 
 </ContentPage>
