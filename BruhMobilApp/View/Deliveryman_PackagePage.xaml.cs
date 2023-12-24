@@ -17,9 +17,14 @@ namespace BruhMobilApp.View
             InitializeComponent();
         }
 
-        private void EndOfDeliveryButton_Clicked(object sender, EventArgs e)
+        private async void MapButton_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushModalAsync(new MapPage());
+        }
 
+        private async void EndOfDeliveryButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new GoodJobPage());
         }
 
         private void CopyCustomerPhoneNumberButton_Clicked(object sender, EventArgs e)
@@ -27,7 +32,7 @@ namespace BruhMobilApp.View
 
         }
 
-        private void MapButton_Clicked(object sender, EventArgs e)
+        private void TPButton_Clicked(object sender, EventArgs e)
         {
 
         }

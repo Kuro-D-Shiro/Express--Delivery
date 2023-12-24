@@ -21,5 +21,10 @@ namespace BruhMobilApp.View
         {
 
         }
+
+        private void TPButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace BruhMobilApp
         {
             InitializeComponent();
 
-            MainPage = new Deliveryman_PackagePage();
+            MainPage = new OrderHasBeenReceived();
         }
 
         protected override void OnStart()

@@ -16,7 +16,7 @@
                     <Button x:Name="CopyDeliverymansPhoneNumberButton" Text="📄" FontSize="30"
                             AbsoluteLayout.LayoutBounds="1, 0.45, 0.25, 1" AbsoluteLayout.LayoutFlags="All" CornerRadius="20"/>
                 </AbsoluteLayout>
-                <Button Text="Обращение в службу поддержки" CornerRadius="20" Clicked="TPButton_Clicked" Margin="0, 50, 0, 20"/>
+                <Button x:Name="TPButton" Text="Обращение в службу поддержки" CornerRadius="20" Clicked="TPButton_Clicked"  Margin="0, 50, 0, 20"/>
             </StackLayout>
         </Frame>
     </AbsoluteLayout>
