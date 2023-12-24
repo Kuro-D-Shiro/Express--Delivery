@@ -9,8 +9,19 @@ namespace BruhMobilApp.Model
 {
     public class User
     {
+        private string name;
+        private string password;
+
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name
+        {
+            get => name;
+            set
+            {
+                if (value != null && value.Length > 1 && value.All(char.IsLetter)) name = value;
+                else throw new Exception($"The «Name» must be stored with more than one letter");
+            }
+        }
         public string Email
         {
             get => email;
@@ -22,7 +33,17 @@ namespace BruhMobilApp.Model
                     throw new Exception($"Wrong email {value}, must contains @");
             }
         }
-        public string Password { get; set; }
+        public string Password
+        {
+            get => password;
+            set
+            {
+                if (value == null && value.Length > 4)
+                {
+                    password = value;
+                }
+            }
+        }
         public string Number
         {
             get => number;
