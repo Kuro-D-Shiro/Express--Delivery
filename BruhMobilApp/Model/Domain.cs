@@ -71,8 +71,8 @@ namespace BruhMobilApp.Model
             get => role;
             set
             {
-                if (value == "deliverman" || value == "customer")
-                    role = value;
+                if (value.ToLower() == "deliverman" || value.ToLower() == "customer")
+                    role = value.ToLower();
                 else
                     throw new Exception($"Wrong role {value}, must be deliverman or customer");
             }
@@ -105,7 +105,7 @@ namespace BruhMobilApp.Model
             get => status;
             set
             {
-                if (value == "busy" || value == "free") status = value;
+                if (value.ToLower() == "busy" || value.ToLower() == "free") status = value.ToLower();
                 else throw new Exception($"Wrong status {value} must be busy or free");
             }
         }
@@ -169,8 +169,8 @@ namespace BruhMobilApp.Model
             get => size;
             set
             {
-                if (value == "small" || value == "standard" || value == "big")
-                    size = value;
+                if (value.ToLower() == "small" || value.ToLower() == "standard" || value.ToLower() == "big")
+                    size = value.ToLower();
                 else
                     throw new Exception($"Wrong size {value} must be small, standard or big");
             }
