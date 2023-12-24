@@ -213,11 +213,12 @@ namespace BruhMobilApp.Model
             Comment = comment;
             Size = size;
             Time = time;
+            status = "wait";
         }
 
         public double CalculateCost(int distanceInMeters)
         {
-            var k = 1e-2;
+            //var k = 1e-2;
             var sizeFactor = new Dictionary<string, double>()
             {{"small", 1.0 }, {"standard", 1.25 }, {"big", 1.5 }};
 
