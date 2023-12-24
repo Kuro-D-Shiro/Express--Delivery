@@ -11,8 +11,17 @@ namespace BruhMobilApp.Model
     {
         private string name;
         private string password;
+        private int id;
 
-        public int Id { get; set; }
+        public int Id 
+        {
+            get => id;
+            set
+            {
+                if (value >= 0) id = value;
+                else throw new ArgumentOutOfRangeException("The «ID» must be greater than or equal to 0");
+            } 
+        }
         public string Name
         {
             get => name;
@@ -42,6 +51,8 @@ namespace BruhMobilApp.Model
                 {
                     password = value;
                 }
+                else
+                    throw new Exception("The «Password» must be longer than 4 chars");
             }
         }
         public string Number
@@ -120,7 +131,16 @@ namespace BruhMobilApp.Model
     }
     public class Package
     {
-        public int Id { get; set; }
+        int id;
+        public int Id
+        {
+            get => id;
+            set
+            {
+                if (value >= 0) id = value;
+                else throw new ArgumentOutOfRangeException("The «ID» must be greater than or equal to 0");
+            }
+        }
         public string StartAddres
         {
             get => startAddres;
@@ -129,7 +149,7 @@ namespace BruhMobilApp.Model
                 if (value.Length != 0)
                     startAddres = value;
                 else
-                    throw new Exception("Address cant be empty");
+                    throw new Exception("Address can't be empty");
             }
         }
         public string EndAddres
@@ -140,7 +160,7 @@ namespace BruhMobilApp.Model
                 if (value.Length != 0)
                     endAddres = value;
                 else
-                    throw new Exception("Addres cant be empty");
+                    throw new Exception("Address can't be empty");
             }
         }
         public string Comment { get; set; }
@@ -157,7 +177,16 @@ namespace BruhMobilApp.Model
 
         }
         public DateTime Time { get; set; }
-        public double Cost { get; set; }
+        private double cost;
+        public double Cost 
+        {
+            get => cost;
+            set 
+            {
+                if (value > 0) cost = value;
+                else throw new ArgumentException($"Wrong cost {value}, it must be greater than 0");
+            }
+        }
         public string Status
         {
             get => status;
