@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "V/Iw1fecYUy5ji+RekQ7wghD+X4y+38xzUWsl9qGKRxd9+f5mbAnk+VxOXqhZUlMrDzrFb2NsDNVjYWObyKt4g==",
+  "dgSpecHash": "t4viA6B6U7w8iNfphAEpvQdyUJtDZFB/k1NZCSPQhPQe7eh7FGsxvWXQkWXaGA0mBEMRcwflwRUDugrAuPo+FQ==",
   "success": true,
-  "projectFilePath": "D:\\ПИ\\BruhMobilApp\\BruhMobilApp\\BruhMobilApp.csproj",
+  "projectFilePath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ilja\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Ilja\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Ilja\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Ilja\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Ilja\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\Егор\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Егор\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Егор\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Егор\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Егор\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
   "logs": []
 }
