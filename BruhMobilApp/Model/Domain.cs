@@ -219,7 +219,7 @@ namespace BruhMobilApp.Model
         {
             var k = 1e-2;
             var sizeFactor = new Dictionary<string, double>()
-            {{"small", 0.5 }, {"standard", 1.0 }, {"big", 2.0 }};
+            {{"small", 1.0 }, {"standard", 1.25 }, {"big", 1.5 }};
 
             Cost = distanceInMeters * sizeFactor[Size];
             return Cost;
