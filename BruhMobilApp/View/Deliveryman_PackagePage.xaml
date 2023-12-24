@@ -16,7 +16,9 @@
                 </Frame>
             </StackLayout>
         </Frame>
-        <Button x:Name="MapButton" Text="Открыть карту Ижевска" AbsoluteLayout.LayoutBounds="0.5, 0.53, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All"
+        <Button x:Name="TPButton" Text="Обращение в службу поддержки" AbsoluteLayout.LayoutBounds="0.5, 0.48, 0.9, 0.075" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="TPButton_Clicked"/>
+        <Button x:Name="MapButton" Text="Открыть карту Ижевска" AbsoluteLayout.LayoutBounds="0.5, 0.58, 0.9, 0.075" AbsoluteLayout.LayoutFlags="All"
                 CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="MapButton_Clicked"/>
         <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.74, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All" Margin="0, 20, 0, 0" >
             <Label Text="Номер заказчика:" TextColor="Black"  FontSize="25"/>
