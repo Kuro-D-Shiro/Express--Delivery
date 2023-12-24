@@ -47,7 +47,7 @@ namespace BruhMobilApp.Model
             get => password;
             set
             {
-                if (value == null && value.Length > 4)
+                if (value != null && value.Length >= 4)
                 {
                     password = value;
                 }
@@ -71,7 +71,7 @@ namespace BruhMobilApp.Model
             get => role;
             set
             {
-                if (value == "deliverman" || value == "customer")
+                if (value.ToLower() == "deliverman" || value.ToLower() == "customer")
                     role = value;
                 else
                     throw new Exception($"Wrong role {value}, must be deliverman or customer");
@@ -105,7 +105,7 @@ namespace BruhMobilApp.Model
             get => status;
             set
             {
-                if (value == "busy" || value == "free") status = value;
+                if (value.ToLower() == "busy" || value.ToLower() == "free") status = value;
                 else throw new Exception($"Wrong status {value} must be busy or free");
             }
         }
