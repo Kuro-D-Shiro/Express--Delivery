@@ -16,7 +16,7 @@
                     <Label Text="Я курьер" FontAttributes="Bold" TextColor="White"/>
                     <Switch x:Name="IsDeliverman" OnColor="#20B2AA" ThumbColor="#008B8B"/>
                 </StackLayout>
-                <Button x:Name="LogIn" Text="Зарегисрироваться" CornerRadius="20" />
+                <Button x:Name="Registration" Text="Зарегисрироваться" CornerRadius="20" Clicked="Registration_Clicked"/>
             </StackLayout>
         </Frame>
     </AbsoluteLayout>

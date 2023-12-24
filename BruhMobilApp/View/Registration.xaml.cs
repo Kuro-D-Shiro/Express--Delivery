@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BruhMobilApp.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,13 @@ namespace BruhMobilApp
             InitializeComponent();
         }
 
+        private async void Registration_Clicked(object sender, EventArgs e)
+        {
+            if(IsDeliverman.IsToggled)
+            {
+                await Navigation.PushModalAsync(new Deliveryman_OrderSelection());
+            }
+            else await Navigation.PushModalAsync(new Customer_MakingOrder());
+        }
     }
 }
