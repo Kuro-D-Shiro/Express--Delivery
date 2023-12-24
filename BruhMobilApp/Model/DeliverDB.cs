@@ -74,7 +74,7 @@ namespace BruhMobilApp
 
         public bool ChekUser(int id)
         {
-            var command = new MySqlCommand("SELECT * FROM `User` WHERE ID` = @id", connection);
+            var command = new MySqlCommand("SELECT * FROM `User` WHERE `id` = @id", connection);
             var adapter = new MySqlDataAdapter();
             var table = new DataTable();
 
@@ -84,16 +84,15 @@ namespace BruhMobilApp
             return table.Rows.Count != 0;
         }
 
-        public void DeleteUsers(int id)
+        public void DeleteUser(int id)
         {
-            var SQLCommand = "DELETE FROM User WHERE `User`.`ID` = @id";
-            var command = new MySqlCommand(SQLCommand, connection);
             if (!ChekUser(id))
             {
                 throw new Exception("Cant find a user in DataBase");
             }
             else
             {
+                var command = new MySqlCommand("DELETE FROM `User` WHERE `id` = @id", connection);
                 command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
                 command.ExecuteNonQuery();
             }
@@ -115,16 +114,16 @@ namespace BruhMobilApp
                 role = role == "" ? user["role"] : role;
                 status = status == "" ? user["status"] : status;
 
-                var command = new MySqlCommand("UPDATE `User` SET `name` = @name, `password` = @password, `email` = @email, `number` = @number, `role` = @role', `status` = @status" +
-                    " WHERE `name` = @name ;", connection);
+                var command = new MySqlCommand("UPDATE `User` SET `name` = @name, `password` = @password, `email` = @email, `number` = @number, `role` = @role, `status` = @status WHERE `id` = @id", connection);
 
+                command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
                 command.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
                 command.Parameters.Add("@password", MySqlDbType.VarChar).Value = password;
                 command.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
                 command.Parameters.Add("@number", MySqlDbType.VarChar).Value = number;
                 command.Parameters.Add("@role", MySqlDbType.VarChar).Value = role;
                 command.Parameters.Add("@status", MySqlDbType.VarChar).Value = status;
-                command.Parameters.Add("@userID", MySqlDbType.Int64).Value = Convert.ToInt64(id);
+
 
                 command.ExecuteNonQuery();
             }
@@ -141,15 +140,21 @@ namespace BruhMobilApp
             adapter.Fill(table);
 
             var user = new Dictionary<string, string>();
-            var row = table.Rows[0];
-
-            user.Add("id", row.ItemArray[0].ToString());
-            user.Add("name", row.ItemArray[1].ToString());
-            user.Add("password", row.ItemArray[2].ToString());
-            user.Add("email", row.ItemArray[3].ToString());
-            user.Add("number", row.ItemArray[4].ToString());
-            user.Add("role", row.ItemArray[5].ToString());
-            user.Add("status", row.ItemArray[6].ToString());
+            if (ChekUser(id))
+            {
+                var row = table.Rows[0];
+                user.Add("id", row.ItemArray[0].ToString());
+                user.Add("name", row.ItemArray[1].ToString());
+                user.Add("password", row.ItemArray[2].ToString());
+                user.Add("email", row.ItemArray[3].ToString());
+                user.Add("number", row.ItemArray[4].ToString());
+                user.Add("role", row.ItemArray[5].ToString());
+                user.Add("status", row.ItemArray[6].ToString());
+            }
+            else
+            {
+                throw new Exception("Cant find a user in DataBase");
+            }
             return user;
         }
 
