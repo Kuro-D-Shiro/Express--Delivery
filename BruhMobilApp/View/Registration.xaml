@@ -17,7 +17,11 @@
                     <Label Text="+7" FontSize="17" TextColor="White"
                            AbsoluteLayout.LayoutBounds="0, 0.5, 0.1, 0.8" AbsoluteLayout.LayoutFlags="All"/>
                     <Entry x:Name="RegistrationNumber" IsPassword="False" Placeholder="Введите номер телефона" TextColor="White"
-                           AbsoluteLayout.LayoutBounds="0.8, 0.5, 0.9, 1" AbsoluteLayout.LayoutFlags="All"/>
+                           AbsoluteLayout.LayoutBounds="0.8, 0.5, 0.9, 1" AbsoluteLayout.LayoutFlags="All">
+                        <Entry.Behaviors>
+                            <local:PhoneNumber_Validation/>
+                        </Entry.Behaviors>
+                    </Entry>
                 </AbsoluteLayout>
                     
                 <Entry x:Name="RegistrationUsersName" IsPassword="False" Placeholder="Введите имя пользователя" TextColor="White"/>
