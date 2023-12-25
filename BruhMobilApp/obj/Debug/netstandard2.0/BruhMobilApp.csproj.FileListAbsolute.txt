@@ -17,3 +17,8 @@ D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Registration.xam
 D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\PasswordRecovery.xaml.g.cs
 D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Deliveryman_OrderSelection.xaml.g.cs
 D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Deliveryman_PackagePage.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\MapPage.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Customer_MakingOrder.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\Customer_WaitingForDelivery.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\GoodJobPage.xaml.g.cs
+D:\ПИ\BruhMobilApp\BruhMobilApp\obj\Debug\netstandard2.0\View\OrderHasBeenReceived.xaml.g.cs

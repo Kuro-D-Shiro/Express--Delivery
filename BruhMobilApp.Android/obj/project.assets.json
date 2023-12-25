@@ -3414,11 +3414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
       "projectName": "BruhMobilApp.Android",
-      "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
+      "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
       "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp.Android\\obj\\",
+      "outputPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3439,8 +3439,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj": {
-              "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj"
+            "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj": {
+              "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj"
             }
           }
         }

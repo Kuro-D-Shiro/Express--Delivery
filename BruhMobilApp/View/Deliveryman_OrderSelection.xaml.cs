@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BruhMobilApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace BruhMobilApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Deliveryman_OrderSelection : ContentPage
     {
+        public IList<Package> Packages;
         public Deliveryman_OrderSelection()
         {
             InitializeComponent();
@@ -19,6 +21,10 @@ namespace BruhMobilApp.View
 
         protected override void OnAppearing()
         {
+            Packages = new List<Package>();
+            Packages.Add(new Package(1, "sdodsf", "adassd", "dsfsdf", "big", new DateTime(TabIndex)));
+            Packages.Add(new Package(1, "sdodsf", "adassd", "dsfsdf", "big", new DateTime(TabIndex)));
+            BindingContext = Packages;
             base.OnAppearing();
         }
 
@@ -28,12 +34,22 @@ namespace BruhMobilApp.View
             btn.Text = ""; //здесь будет начальная и конечная точки доставки
             btn.CornerRadius = 15;
             btn.Clicked += GoToTheOrderPage;
-            ListOfOrders.Children.Add(btn);
+            //ListOfOrders.Children.Add(btn);
         }
 
         private void GoToTheOrderPage(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private async void PackagesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Package package = e.CurrentSelection[0] as Package;
+
+            if(await DisplayAlert("Вы хотите взять этот заказ?", $"{package.StartAddress} - {package.EndAddress}", "Да", "Нет"))
+            {
+                await Navigation.PushModalAsync(new Deliveryman_PackagePage());
+            }
         }
     }
 }

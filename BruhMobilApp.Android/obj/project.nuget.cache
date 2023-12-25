@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fTaIjqlpAmzSmQgJ+ejOdrlanaldDssQwc7TXCgZFMkgLdAJ1LQQCWCLu8btEUgpXEetdc78XD1uNestySMdZA==",
+  "dgSpecHash": "yS6d6AWoP+KI+pQyeJxtncGFYSp8UIaqEtsMIFs6wswzaAPI1hKaI7NTR020SvpfUW8I9uGH7QPJvT9H0A/tVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
+  "projectFilePath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Егор\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Егор\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

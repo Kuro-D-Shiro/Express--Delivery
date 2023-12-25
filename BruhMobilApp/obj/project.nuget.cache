@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t4viA6B6U7w8iNfphAEpvQdyUJtDZFB/k1NZCSPQhPQe7eh7FGsxvWXQkWXaGA0mBEMRcwflwRUDugrAuPo+FQ==",
+  "dgSpecHash": "tHQ6pqjVKMFDFqIW+M4BcsBsSg/EOZx2ps0ZAiIyMq60AAKLqeOcU7HrQxd39DTmTgUbFSG1Riyo3eBBCm/jvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
+  "projectFilePath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Егор\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Егор\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

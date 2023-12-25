@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BruhMobilApp.View.Customer_WaitingForDelivery">
+    <AbsoluteLayout>
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.9, 0.5" AbsoluteLayout.LayoutFlags="All"
+               BackgroundColor="#008080" CornerRadius="20">
+            <StackLayout>
+                <Label Text="Курьер доставит заказ через:" TextColor="White"  FontSize="30" Margin="10,20,0,0"/>
+                <Label x:Name="RemainingTime_Customer" TextColor="White" FontSize="20" Margin="10,0,0,0"/>
+                <AbsoluteLayout Margin="0, 20, 0, 0" HeightRequest="100">
+                    <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 0.7, 0.15" AbsoluteLayout.LayoutFlags="All">
+                        <Label Text="Номер заказчика:" TextColor="White" FontSize="25"/>
+                        <Label Text="88005553535" TextColor="White" FontSize="25"/>
+                    </StackLayout>
+                    <Button x:Name="CopyDeliverymansPhoneNumberButton" Text="📄" FontSize="30"
+                            AbsoluteLayout.LayoutBounds="1, 0.45, 0.25, 1" AbsoluteLayout.LayoutFlags="All" CornerRadius="20" Clicked="CopyDeliverymansPhoneNumberButton_Clicked"/>
+                </AbsoluteLayout>
+                <Button x:Name="TPButton" Text="Обращение в службу поддержки" CornerRadius="20" Clicked="TPButton_Clicked"  Margin="0, 50, 0, 20"/>
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>

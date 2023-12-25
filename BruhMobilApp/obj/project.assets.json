@@ -547,11 +547,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
+      "projectUniqueName": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
       "projectName": "BruhMobilApp",
-      "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
+      "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj",
       "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\Express--Delivery\\BruhMobilApp\\obj\\",
+      "outputPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
