@@ -22,8 +22,8 @@ namespace BruhMobilApp.View
         protected override void OnAppearing()
         {
             Packages = new List<Package>();
-            Packages.Add(new Package(1, "sdodsf", "adassd", "dsfsdf", "big", new DateTime(TabIndex)));
-            Packages.Add(new Package(1, "sdodsf", "adassd", "dsfsdf", "big", new DateTime(TabIndex)));
+            Packages.Add(new Package("sdodsf", "adassd", "dsfsdf", "big", new DateTime(TabIndex)));
+            Packages.Add(new Package("sdodsf", "adassd", "dsfsdf", "big", new DateTime(TabIndex)));
             BindingContext = Packages;
             base.OnAppearing();
         }
@@ -46,7 +46,7 @@ namespace BruhMobilApp.View
         {
             Package package = e.CurrentSelection[0] as Package;
 
-            if(await DisplayAlert("Вы хотите взять этот заказ?", $"{package.StartAddress} - {package.EndAddress}", "Да", "Нет"))
+            if(await DisplayAlert("Вы хотите взять этот заказ?", $"{package.StartAddres} - {package.EndAddres}", "Да", "Нет"))
             {
                 await Navigation.PushModalAsync(new Deliveryman_PackagePage());
             }

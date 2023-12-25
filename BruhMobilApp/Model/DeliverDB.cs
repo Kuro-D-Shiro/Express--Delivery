@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-
+using System.Data;
 
 namespace BruhMobilApp
 {
@@ -36,6 +36,7 @@ namespace BruhMobilApp
                 connection.Close();
             }
         }
+
 
         public void AddUser(User user)
         {
@@ -74,9 +75,9 @@ namespace BruhMobilApp
             command.ExecuteNonQuery();
         }
 
-        public bool ChekUser(int id)
+        public bool CheckUser(int id)
         {
-            var command = new MySqlCommand("SELECT * FROM `User` WHERE ID` = @id", connection);
+            var command = new MySqlCommand("SELECT * FROM `User` WHERE `id` = @id", connection);
             var adapter = new MySqlDataAdapter();
             var table = new DataTable();
 
@@ -86,16 +87,15 @@ namespace BruhMobilApp
             return table.Rows.Count != 0;
         }
 
-        public void DeleteUsers(int id)
+        public void DeleteUser(int id)
         {
-            var SQLCommand = "DELETE FROM User WHERE `User`.`ID` = @id";
-            var command = new MySqlCommand(SQLCommand, connection);
-            if (!ChekUser(id))
+            if (!CheckUser(id))
             {
                 throw new Exception("Cant find a user in DataBase");
             }
             else
             {
+                var command = new MySqlCommand("DELETE FROM `User` WHERE `id` = @id", connection);
                 command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
                 command.ExecuteNonQuery();
             }
@@ -103,7 +103,7 @@ namespace BruhMobilApp
 
         public void UpdateUser(int id, string name = "", string email = "", string password = "", string number = "", string role = "", string status = "")
         {
-            if (!ChekUser(id))
+            if (!CheckUser(id))
             {
                 throw new Exception("Cant find a user in DataBase");
             }
@@ -117,16 +117,16 @@ namespace BruhMobilApp
                 role = role == "" ? user["role"] : role;
                 status = status == "" ? user["status"] : status;
 
-                var command = new MySqlCommand("UPDATE `User` SET `name` = @name, `password` = @password, `email` = @email, `number` = @number, `role` = @role', `status` = @status" +
-                    " WHERE `name` = @name ;", connection);
+                var command = new MySqlCommand("UPDATE `User` SET `name` = @name, `password` = @password, `email` = @email, `number` = @number, `role` = @role, `status` = @status WHERE `id` = @id", connection);
 
+                command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
                 command.Parameters.Add("@name", MySqlDbType.VarChar).Value = name;
                 command.Parameters.Add("@password", MySqlDbType.VarChar).Value = password;
                 command.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
                 command.Parameters.Add("@number", MySqlDbType.VarChar).Value = number;
                 command.Parameters.Add("@role", MySqlDbType.VarChar).Value = role;
                 command.Parameters.Add("@status", MySqlDbType.VarChar).Value = status;
-                command.Parameters.Add("@userID", MySqlDbType.Int64).Value = Convert.ToInt64(id);
+
 
                 command.ExecuteNonQuery();
             }
@@ -143,31 +143,113 @@ namespace BruhMobilApp
             adapter.Fill(table);
 
             var user = new Dictionary<string, string>();
-            var row = table.Rows[0];
-
-            user.Add("id", row.ItemArray[0].ToString());
-            user.Add("name", row.ItemArray[1].ToString());
-            user.Add("password", row.ItemArray[2].ToString());
-            user.Add("email", row.ItemArray[3].ToString());
-            user.Add("number", row.ItemArray[4].ToString());
-            user.Add("role", row.ItemArray[5].ToString());
-            user.Add("status", row.ItemArray[6].ToString());
+            if (CheckPackage(id))
+            {
+                var row = table.Rows[0];
+                user.Add("id", row.ItemArray[0].ToString());
+                user.Add("name", row.ItemArray[1].ToString());
+                user.Add("password", row.ItemArray[2].ToString());
+                user.Add("email", row.ItemArray[3].ToString());
+                user.Add("number", row.ItemArray[4].ToString());
+                user.Add("role", row.ItemArray[5].ToString());
+                user.Add("status", row.ItemArray[6].ToString());
+            }
+            else
+            {
+                throw new Exception("Cant find a Package in DataBase");
+            }
             return user;
         }
 
-        public void AddPackege()
-        {
 
-        }
-        public void DeletePackage()
+        public bool CheckPackage(int id)
         {
+            var command = new MySqlCommand("SELECT * FROM `Package` WHERE `id` = @id", connection);
+            var adapter = new MySqlDataAdapter();
+            var table = new DataTable();
 
+            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            return table.Rows.Count != 0;
         }
-        public void UpdatePackage()
+
+        public void AddPackege(Package package)
         {
+            var SQLCommand = "INSERT INTO `Package` (`startAdress`, `endAdress`, `size`, `comment`, `time`, `cost`, `status`) VALUES (@startAdres, @endAdres, @size, @comment, @time, @cost, @status)";
+            var command = new MySqlCommand(SQLCommand, connection);
 
+            command.Parameters.Add("@startAdres", MySqlDbType.VarChar).Value = package.StartAddres;
+            command.Parameters.Add("@endAdres", MySqlDbType.VarChar).Value = package.EndAddres;
+            command.Parameters.Add("@size", MySqlDbType.VarChar).Value = package.Size;
+            command.Parameters.Add("@comment", MySqlDbType.VarChar).Value = package.Comment;
+            command.Parameters.Add("@time", MySqlDbType.VarChar).Value = package.Time.ToString();
+            command.Parameters.Add("@cost", MySqlDbType.VarChar).Value = package.Cost;
+            command.Parameters.Add("@status", MySqlDbType.VarChar).Value = package.Status;
+
+            command.ExecuteNonQuery();
+
+            command = new MySqlCommand("SELECT * FROM `Package` WHERE `time` = @time", connection);
+            var adapter = new MySqlDataAdapter();
+            var table = new DataTable();
+
+            command.Parameters.Add("@time", MySqlDbType.VarChar).Value = package.Time.ToString();
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            var row = table.Rows[0];
+
+            var id = row.ItemArray[0].ToString();
+            package.Id = int.Parse(id);
         }
-        public void ReadPackage(int id)
+
+        public void DeletePackage(int id)
+        {
+            if (!CheckPackage(id))
+            {
+                throw new Exception("Cant find a user in DataBase");
+            }
+            else
+            {
+                var command = new MySqlCommand("DELETE FROM `Package` WHERE `id` = @id", connection);
+                command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void UpdatePackage(int id, string startAddress = "", string endAddress = "", string comment = "", string size = "", string time = "", string cost = "", string status = "")
+        {
+            if (!CheckPackage(id))
+            {
+                throw new Exception("Cant find a package in DataBase");
+            }
+            else
+            {
+                var package = ReadPackage(id);
+                startAddress = startAddress == "" ? package["startAddres"] : startAddress;
+                endAddress = endAddress == "" ? package["endAddres"] : endAddress;
+                comment = comment == "" ? package["comment"] : comment;
+                size = size == "" ? package["size"] : size;
+                time = time == "" ? package["time"] : time;
+                cost = cost == "" ? package["cost"] : cost;
+                status = status == "" ? package["status"] : status;
+
+
+                var command = new MySqlCommand("UPDATE `Package` SET `startAdress` = @startAddres, `endAdress` = @endAddres, `size` = @size, `comment` = @comment, `time` = @time, `cost` = '0.1', `status` = @status WHERE `Package`.`id` = @id", connection);
+
+                command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id.ToString();
+                command.Parameters.Add("@startAddres", MySqlDbType.VarChar).Value = startAddress;
+                command.Parameters.Add("@endAddres", MySqlDbType.VarChar).Value = endAddress;
+                command.Parameters.Add("@size", MySqlDbType.VarChar).Value = size;
+                command.Parameters.Add("@comment", MySqlDbType.VarChar).Value = comment;
+                command.Parameters.Add("@time", MySqlDbType.VarChar).Value = time;
+                command.Parameters.Add("@cost", MySqlDbType.Decimal).Value = cost;
+                command.Parameters.Add("@status", MySqlDbType.VarChar).Value = status;
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public Dictionary<string, string> ReadPackage(int id)
         {
             var command = new MySqlCommand("SELECT * FROM `Package` WHERE `id` = @id", connection);
             var adapter = new MySqlDataAdapter();
@@ -193,10 +275,8 @@ namespace BruhMobilApp
                 package.Add("time", row.ItemArray[5].ToString());
                 package.Add("cost", row.ItemArray[6].ToString());
                 package.Add("status", row.ItemArray[7].ToString());
-                foreach (var val in package.Values)
-                    MessageBox.Show(val);
+                return package;
             }
         }
     }
 }
-*/

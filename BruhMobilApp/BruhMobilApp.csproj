@@ -63,4 +63,13 @@
   <ItemGroup>
     <Folder Include="Model\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>Library\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>Library\System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

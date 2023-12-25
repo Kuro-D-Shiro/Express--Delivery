@@ -3408,24 +3408,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ilja\\.nuget\\packages\\": {},
+    "C:\\Users\\Егор\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ПИ\\BruhMobilApp\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
       "projectName": "BruhMobilApp.Android",
-      "projectPath": "D:\\ПИ\\BruhMobilApp\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
-      "packagesPath": "C:\\Users\\Ilja\\.nuget\\packages\\",
-      "outputPath": "D:\\ПИ\\BruhMobilApp\\BruhMobilApp.Android\\obj\\",
+      "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\BruhMobilApp.Android.csproj",
+      "packagesPath": "C:\\Users\\Егор\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ilja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Егор\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3439,8 +3439,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "D:\\ПИ\\BruhMobilApp\\BruhMobilApp\\BruhMobilApp.csproj": {
-              "projectPath": "D:\\ПИ\\BruhMobilApp\\BruhMobilApp\\BruhMobilApp.csproj"
+            "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj": {
+              "projectPath": "C:\\Users\\Егор\\source\\repos\\bruhMobile\\Express--Delivery\\BruhMobilApp\\BruhMobilApp.csproj"
             }
           }
         }
