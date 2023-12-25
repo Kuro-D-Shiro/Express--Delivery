@@ -16,7 +16,6 @@ namespace BruhMobilApp.View
         public IList<Package> Packages;
         public Deliveryman_OrderSelection()
         {
-            //Device.SetFlags(new string[] { "Shapes_Experimental" });
             InitializeComponent();
         }
 
