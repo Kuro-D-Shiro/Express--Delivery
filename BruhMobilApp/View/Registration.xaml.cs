@@ -1,4 +1,5 @@
 ﻿using BruhMobilApp.View;
+using BruhMobilApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,11 +21,20 @@ namespace BruhMobilApp
 
         private async void Registration_Clicked(object sender, EventArgs e)
         {
-            if(IsDeliverman.IsToggled)
+            DeliverDB deliverDB = new DeliverDB();
+            deliverDB.openConnection();
+            if (IsDeliverman.IsToggled)
             {
+                deliverDB.AddUser(new Deliverman(RegistrationUsersName.Text, RegistrationEmail.Text, RegistrationPassword.Text, $"8{RegistrationNumber.Text}", "deliverman", "free"));
                 await Navigation.PushModalAsync(new Deliveryman_OrderSelection());
+                deliverDB.closeConnection();
             }
-            else await Navigation.PushModalAsync(new Customer_MakingOrder());
+            else
+            {
+                deliverDB.AddUser(((User)new Customer(RegistrationUsersName.Text, RegistrationEmail.Text, RegistrationPassword.Text, $"8{RegistrationNumber.Text}", "customer", "free")));
+                await Navigation.PushModalAsync(new Customer_MakingOrder());
+                deliverDB.closeConnection();
+            }
         }
     }
 }

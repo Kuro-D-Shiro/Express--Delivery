@@ -119,10 +119,22 @@ namespace BruhMobilApp.Model
     }
     public class Customer : User
     {
+        private string status;
+        public string Status
+        {
+            get => status;
+            set
+            {
+                if (value.ToLower() == "busy" || value.ToLower() == "free") status = value.ToLower();
+                else throw new Exception($"Неправильный статус «{value}», допустимые варианты — «busy» или «free»");
+            }
+        }
         /* Просто дублирует конструкторы чтоб класс не пустой был*/
-        public Customer(string name, string email, string password, string number, string role) :
+        public Customer(string name, string email, string password, string number, string role, string status) :
             base(name, email, password, number, role)
-        { }
+        {
+            
+        }
 
 
         public Customer(string name, string email, string password, string number, string role, List<Package> packages) :
@@ -169,7 +181,7 @@ namespace BruhMobilApp.Model
             get => size;
             set
             {
-                if (value.ToLower() == "small" || value.ToLower() == "standard" || value.ToLower() == "big")
+                if (value.ToLower() == "small" || value.ToLower() == "standard" || value.ToLower() == "big" || value.ToLower() == "not")
                     size = value.ToLower();
                 else
                     throw new Exception($"Неправильный размер:«{value}», допустимые варианты: «small», «standard» или «big»");
@@ -206,12 +218,12 @@ namespace BruhMobilApp.Model
         private string size;
         private string status;
 
-        public Package(string startAddress, string endAddress, string comment, string size, DateTime time)
+        public Package(string startAddress, string endAddress, string comment, DateTime time)
         {
             StartAddres = startAddress;
             EndAddres = endAddress;
             Comment = comment;
-            Size = size;
+            Size = "not";
             Time = time;
             status = "wait";
         }

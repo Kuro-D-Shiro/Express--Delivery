@@ -24,7 +24,7 @@ namespace BruhMobilApp.ModelView
         {
             string str = e.NewTextValue;
 
-            ((Entry)sender).TextColor = (!str.Contains(" ") && str.Contains("@gmail.com")  && Regex.IsMatch(str, @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+            ((Entry)sender).TextColor = (!str.Contains(" ") && Regex.IsMatch(str, @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$", RegexOptions.IgnoreCase)) ? Color.White : Color.Red;
         }
     }
