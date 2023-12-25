@@ -181,7 +181,7 @@ namespace BruhMobilApp.Model
             get => size;
             set
             {
-                if (value.ToLower() == "small" || value.ToLower() == "standard" || value.ToLower() == "big")
+                if (value.ToLower() == "small" || value.ToLower() == "standard" || value.ToLower() == "big" || value.ToLower() == "not")
                     size = value.ToLower();
                 else
                     throw new Exception($"Неправильный размер:«{value}», допустимые варианты: «small», «standard» или «big»");
@@ -218,12 +218,12 @@ namespace BruhMobilApp.Model
         private string size;
         private string status;
 
-        public Package(string startAddress, string endAddress, string comment, string size, DateTime time)
+        public Package(string startAddress, string endAddress, string comment, DateTime time)
         {
             StartAddres = startAddress;
             EndAddres = endAddress;
             Comment = comment;
-            Size = size;
+            Size = "not";
             Time = time;
             status = "wait";
         }

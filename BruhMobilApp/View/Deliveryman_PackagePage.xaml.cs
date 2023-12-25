@@ -1,4 +1,5 @@
 ﻿using System;
+using BruhMobilApp.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace BruhMobilApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Deliveryman_PackagePage : ContentPage
     {
+        Package package; 
         public Deliveryman_PackagePage()
         {
             InitializeComponent();
@@ -37,6 +39,15 @@ namespace BruhMobilApp.View
             Uri uri = new Uri("https://t.me/kuroDshiro");
 
             await Browser.OpenAsync(uri);
+        }
+
+        public Deliveryman_PackagePage(Package package)
+        {
+            InitializeComponent();
+            this.package = package;
+            StartAdress.Text += package.StartAddres;
+            FinishAdress.Text += package.EndAddres;
+            CustomersComment.Text += package.Comment;
         }
     }
 }
