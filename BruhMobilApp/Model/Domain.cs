@@ -119,10 +119,22 @@ namespace BruhMobilApp.Model
     }
     public class Customer : User
     {
+        private string status;
+        public string Status
+        {
+            get => status;
+            set
+            {
+                if (value.ToLower() == "busy" || value.ToLower() == "free") status = value.ToLower();
+                else throw new Exception($"Неправильный статус «{value}», допустимые варианты — «busy» или «free»");
+            }
+        }
         /* Просто дублирует конструкторы чтоб класс не пустой был*/
-        public Customer(string name, string email, string password, string number, string role) :
+        public Customer(string name, string email, string password, string number, string role, string status) :
             base(name, email, password, number, role)
-        { }
+        {
+            
+        }
 
 
         public Customer(string name, string email, string password, string number, string role, List<Package> packages) :
