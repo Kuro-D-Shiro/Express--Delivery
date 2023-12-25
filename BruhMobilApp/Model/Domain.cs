@@ -77,7 +77,7 @@ namespace BruhMobilApp.Model
                     throw new Exception($"Неправильная роль:«{value}», возможные варианты – «deliverman» или «customer»");
             }
         }
-        private List<Package> Packages { get; set; }
+        public List<Package> Packages { get; set; }
         private string email;
         private string number;
         private string role;
@@ -218,12 +218,12 @@ namespace BruhMobilApp.Model
         private string size;
         private string status;
 
-        public Package(string startAddress, string endAddress, string comment, DateTime time)
+        public Package(string startAddress, string endAddress, string comment, DateTime time, string size = "not")
         {
             StartAddres = startAddress;
             EndAddres = endAddress;
             Comment = comment;
-            Size = "not";
+            Size = size;
             Time = time;
             status = "wait";
         }
