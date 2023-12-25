@@ -19,7 +19,7 @@ namespace BruhMobilApp.Model
             set
             {
                 if (value >= 0) id = value;
-                else throw new ArgumentOutOfRangeException("The «ID» must be greater than or equal to 0");
+                else throw new ArgumentOutOfRangeException("Поле «ID» должно быть больше чем или равно 0!");
             } 
         }
         public string Name
@@ -28,7 +28,7 @@ namespace BruhMobilApp.Model
             set
             {
                 if (value != null && value.Length > 1 && value.All(char.IsLetter)) name = value;
-                else throw new Exception($"The «Name» must be stored with more than one letter");
+                else throw new Exception($"Поле «Имя» должно содержать больше чем одну букву!");
             }
         }
         public string Email
@@ -39,7 +39,7 @@ namespace BruhMobilApp.Model
                 if (value.Contains("@"))
                     email = value;
                 else
-                    throw new Exception($"Wrong email {value}, must contains @");
+                    throw new Exception($"Неправильный ввод:«{value}», e-mail должен содержать символ \'@\'!");
             }
         }
         public string Password
@@ -52,7 +52,7 @@ namespace BruhMobilApp.Model
                     password = value;
                 }
                 else
-                    throw new Exception("The «Password» must be longer than 4 chars");
+                    throw new Exception("Поле «Пароль» должно быть длиннее чем 4 символа!");
             }
         }
         public string Number
@@ -60,10 +60,10 @@ namespace BruhMobilApp.Model
             get => number;
             set
             {
-                if (value.All(char.IsDigit))
+                if (value.All(char.IsDigit) && value.Length == 11)
                     number = value;
                 else
-                    throw new Exception($"Wrong number {value}, must contains only digits");
+                    throw new Exception($"Неправильный формат номера «{value}», должен содержать только цифры!");
             }
         }
         public string Role
@@ -74,7 +74,7 @@ namespace BruhMobilApp.Model
                 if (value.ToLower() == "deliverman" || value.ToLower() == "customer")
                     role = value.ToLower();
                 else
-                    throw new Exception($"Wrong role {value}, must be deliverman or customer");
+                    throw new Exception($"Неправильная роль:«{value}», возможные варианты – «deliverman» или «customer»");
             }
         }
         private List<Package> Packages { get; set; }
@@ -106,7 +106,7 @@ namespace BruhMobilApp.Model
             set
             {
                 if (value.ToLower() == "busy" || value.ToLower() == "free") status = value.ToLower();
-                else throw new Exception($"Wrong status {value} must be busy or free");
+                else throw new Exception($"Неправильный статус «{value}», допустимые варианты — «busy» или «free»");
             }
         }
         private string status;
@@ -138,7 +138,7 @@ namespace BruhMobilApp.Model
             set
             {
                 if (value >= 0) id = value;
-                else throw new ArgumentOutOfRangeException("The «ID» must be greater than or equal to 0");
+                else throw new ArgumentOutOfRangeException("Поле «ID» должно быть больше чем или равно 0!");
             }
         }
         public string StartAddres
@@ -149,7 +149,7 @@ namespace BruhMobilApp.Model
                 if (value.Length != 0)
                     startAddres = value;
                 else
-                    throw new Exception("Address can't be empty");
+                    throw new Exception("Адрес не может быть пустым!");
             }
         }
         public string EndAddres
@@ -160,7 +160,7 @@ namespace BruhMobilApp.Model
                 if (value.Length != 0)
                     endAddres = value;
                 else
-                    throw new Exception("Address can't be empty");
+                    throw new Exception("Адрес не может быть пустым!");
             }
         }
         public string Comment { get; set; }
@@ -172,7 +172,7 @@ namespace BruhMobilApp.Model
                 if (value.ToLower() == "small" || value.ToLower() == "standard" || value.ToLower() == "big")
                     size = value.ToLower();
                 else
-                    throw new Exception($"Wrong size {value} must be small, standard or big");
+                    throw new Exception($"Неправильный размер:«{value}», допустимые варианты: «small», «standard» или «big»");
             }
 
         }
@@ -184,7 +184,7 @@ namespace BruhMobilApp.Model
             set 
             {
                 if (value > 0) cost = value;
-                else throw new ArgumentException($"Wrong cost {value}, it must be greater than 0");
+                else throw new ArgumentException($"Неправильная стоимость «{value}», стоимость должна быть больше нуля!");
             }
         }
         public string Status
@@ -196,7 +196,7 @@ namespace BruhMobilApp.Model
                 if (allowedStatus.Contains(value.ToLower()))
                     status = value.ToLower();
                 else
-                    throw new Exception($"{value} is not allowed, mast be" +
+                    throw new Exception($"Ошибка ввода:«{value}», разрешённые варианты:" +
                         $" \"wait\", \"delivered\", \"trasport\", \"rejected\"");
             }
         }
