@@ -11,7 +11,7 @@
                 <AbsoluteLayout Margin="0, 20, 0, 0" HeightRequest="100">
                     <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 0.7, 0.15" AbsoluteLayout.LayoutFlags="All">
                         <Label Text="Номер заказчика:" TextColor="White" FontSize="25"/>
-                        <Label Text="88005553535" TextColor="White" FontSize="25"/>
+                        <Label x:Name="DelivermansNumber" Text="88005553535" TextColor="White" FontSize="25"/>
                     </StackLayout>
                     <Button x:Name="CopyDeliverymansPhoneNumberButton" Text="📄" FontSize="30"
                             AbsoluteLayout.LayoutBounds="1, 0.45, 0.25, 1" AbsoluteLayout.LayoutFlags="All" CornerRadius="20" Clicked="CopyDeliverymansPhoneNumberButton_Clicked"/>

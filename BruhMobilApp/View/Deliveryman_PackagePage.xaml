@@ -11,7 +11,7 @@
                 <Label Text="Комментарий заказчика: " FontSize="20" TextColor="White" Margin="0, 20, 0, 0"/>
                 <Frame HeightRequest="100" CornerRadius="20">
                     <ScrollView>
-                        <Label x:Name="CustomersComment" TextColor="Black"/>
+                        <Label x:Name="CustomersComment" Text="" TextColor="Black"/>
                     </ScrollView>
                 </Frame>
             </StackLayout>
