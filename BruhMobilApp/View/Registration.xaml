@@ -1,17 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BruhMobilApp.RegistrationPage">
+             x:Class="BruhMobilApp.RegistrationPage"
+             xmlns:local="clr-namespace:BruhMobilApp.ModelView">
     <AbsoluteLayout>
         <Label Text="Регистрация учётной записи" FontSize="30" FontAttributes="Bold" TextColor="Black" 
                AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.7, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
         <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.725, 0.475" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="50">
             <StackLayout>
-                <Entry x:Name="RegistrationEmail" IsPassword="False" Placeholder="Введите электронную почту"/>
-                <Entry x:Name="RegistrationNumber" IsPassword="False" Placeholder="Введите номер телефона"/>
-                <Entry x:Name="RegistrationUsersName" IsPassword="False" Placeholder="Введите имя пользователя"/>
-                <Entry x:Name="RegistrationPassword" IsPassword="True" Placeholder="Введите пароль"/>
-                <Entry x:Name="RegistrationConfirmPassword" IsPassword="True" Placeholder="Подтвердите пароль"/>
+                <Entry x:Name="RegistrationEmail" IsPassword="False" Placeholder="Введите электронную почту" TextColor="White">
+                    <Entry.Behaviors>
+                        <local:E_Mail_Validation/>
+                    </Entry.Behaviors>
+                </Entry>
+                <AbsoluteLayout>
+                    <Label Text="+7" FontSize="17" TextColor="White"
+                           AbsoluteLayout.LayoutBounds="0, 0.5, 0.1, 0.8" AbsoluteLayout.LayoutFlags="All"/>
+                    <Entry x:Name="RegistrationNumber" IsPassword="False" Placeholder="Введите номер телефона" TextColor="White"
+                           AbsoluteLayout.LayoutBounds="0.8, 0.5, 0.9, 1" AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+                    
+                <Entry x:Name="RegistrationUsersName" IsPassword="False" Placeholder="Введите имя пользователя" TextColor="White"/>
+                <Entry x:Name="RegistrationPassword" IsPassword="True" Placeholder="Введите пароль" TextColor="White"/>
+                <Entry x:Name="RegistrationConfirmPassword" IsPassword="True" Placeholder="Подтвердите пароль" TextColor="White"/>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Я курьер" FontAttributes="Bold" TextColor="White"/>
                     <Switch x:Name="IsDeliverman" OnColor="#20B2AA" ThumbColor="#008B8B"/>
