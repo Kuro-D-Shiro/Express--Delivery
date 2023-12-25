@@ -2,16 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BruhMobilApp.View.Deliveryman_OrderSelection">
+    <ContentPage.Resources>
+        <Style TargetType="StackLayout">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="#008080"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <AbsoluteLayout>
         <Label Text="Выберите заказ" FontSize="30" FontAttributes="Bold" TextColor="Black" 
                AbsoluteLayout.LayoutBounds="0.5, 0.01, 0.7, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
-        <Frame BackgroundColor="#008080" AbsoluteLayout.LayoutBounds="1, 1, 1, 0.93" AbsoluteLayout.LayoutFlags="All" CornerRadius="20">
+        <Frame BackgroundColor="#008080" AbsoluteLayout.LayoutBounds="0.5, 0.8, 1, 0.92" AbsoluteLayout.LayoutFlags="All" CornerRadius="20">
             <ScrollView>
                 <StackLayout x:Name="ListOfOrders">
-                    
+                    <CollectionView x:Name="PackagesList"
+                                    ItemsSource="{Binding}"
+                                    SelectionMode="Single"
+                                    SelectionChanged="PackagesList_SelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Frame BackgroundColor="Gray" CornerRadius="20">
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding StartAddress}" FontSize="20" TextColor="Black"/>
+                                                    <Span Text=" - " FontSize="20" TextColor="Black"/>
+                                                    <Span Text="{Binding EndAddress}" FontSize="20" TextColor="Black"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </Frame>
+                                    <Line HeightRequest="10" />
+                                </StackLayout>
+                                
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </ScrollView>
         </Frame>
-        <BoxView AbsoluteLayout.LayoutBounds="1, 1, 1, 0.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080"/>
     </AbsoluteLayout>
 </ContentPage>

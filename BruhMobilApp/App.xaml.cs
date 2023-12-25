@@ -11,7 +11,7 @@ namespace BruhMobilApp
         {
             InitializeComponent();
 
-            MainPage = new OrderHasBeenReceived();
+            MainPage = new LogInPage();
         }
 
         protected override void OnStart()
