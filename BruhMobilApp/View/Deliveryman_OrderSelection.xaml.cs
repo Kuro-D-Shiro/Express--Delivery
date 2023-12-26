@@ -22,8 +22,11 @@ namespace BruhMobilApp.View
 
         protected override void OnAppearing()
         {
-            Packages = new List<Package>();
+            DeliverDB deliverDB = new DeliverDB();
+            deliverDB.openConnection();
+            Packages = deliverDB.GetStatusPackage();
             BindingContext = Packages;
+            deliverDB.closeConnection();
             base.OnAppearing();
         }
 
