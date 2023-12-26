@@ -53,5 +53,14 @@ namespace ValidationTests
             phoneNumber_Validation.OnEntryTextChange(entry, e);
             Debug.Assert(Color.Red == entry.TextColor);
         }
+        [TestMethod]
+        public void InCorrectPhoneNumberTest2()
+        {
+            Entry entry = new Entry();
+            PhoneNumber_Validation phoneNumber_Validation = new PhoneNumber_Validation();
+            TextChangedEventArgs e = new TextChangedEventArgs(entry.Text, "sdfowefD2304we");
+            phoneNumber_Validation.OnEntryTextChange(entry, e);
+            Debug.Assert(Color.Red == entry.TextColor);
+        }
     }
 }
