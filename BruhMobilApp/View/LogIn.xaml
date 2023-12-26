@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BruhMobilApp.LogInPage">
+             x:Class="BruhMobilApp.LogInPage"
+             xmlns:local="clr-namespace:BruhMobilApp.ModelView">
 
     <AbsoluteLayout>
         <Label Text="Вход в учётную запись" FontSize="30" FontAttributes="Bold" TextColor="Black" 
                AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.7, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
         <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.7, 0.35" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="50">
             <StackLayout>
-                <Entry x:Name="LiginingUsersName" IsPassword="False" Placeholder="Введите имя пользователя"/>
-                <Entry x:Name="LoginingPassword" IsPassword="True" Placeholder="Введите пароль"/>
+                <Entry x:Name="LoginingUsersName" IsPassword="False" Placeholder="Введите имя пользователя" TextColor="White"/>
+                <Entry x:Name="LoginingPassword" IsPassword="True" Placeholder="Введите пароль" TextColor="White"/>
                 <Button x:Name="LogInButton" Text="Войти" CornerRadius="20" Clicked="LogInButton_Clicked"/>
-                <Label Text="Нет учётной записи?" TextColor="Black" FontSize="14"/>
-                <Button x:Name="GoToTheRegistrationPage" Text="Зарегистрироваться" CornerRadius="20" BackgroundColor="#008080" BorderWidth="1" BorderColor="Wheat" Clicked="GoToTheRegistrationPage_Clicked"/>
+                <Label Text="Нет учётной записи?" TextColor="White" FontSize="14"/>
+                <Button x:Name="GoToTheRegistrationPage" Text="Зарегистрироваться" TextColor="White" CornerRadius="20" BackgroundColor="#008080" BorderWidth="1" BorderColor="White" Clicked="GoToTheRegistrationPage_Clicked"/>
             </StackLayout>
         </Frame>
-        <Button x:Name="PasswordRecovery" Text="Забыли пароль?" AbsoluteLayout.LayoutBounds="0.1, 1, 1, 0.05" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" Clicked="PasswordRecovery_Clicked"/>
-    </AbsoluteLayout> 
+        <Button x:Name="PasswordRecovery" Text="Забыли пароль?" TextColor="White" AbsoluteLayout.LayoutBounds="0.1, 1, 1, 0.05" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" Clicked="PasswordRecovery_Clicked"/>
+    </AbsoluteLayout>
 
 </ContentPage>

@@ -631,3 +631,4 @@ D:\ПИ\BruhMobilApp\BruhMobilApp.Android\obj\Debug\120\stamp\_ConvertResourcesC
 D:\ПИ\BruhMobilApp\BruhMobilApp.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\ПИ\BruhMobilApp\BruhMobilApp.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\ПИ\BruhMobilApp\BruhMobilApp.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\ПИ\BruhMobilApp\BruhMobilApp.Android\obj\Debug\120\res\drawable\klass.png

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BruhMobilApp.View.Customer_MakingOrder">
+    <AbsoluteLayout>
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.05, 0.9, 0.31" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="20">
+            <StackLayout>
+                <Label Text="Оформление заказа" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                <Label Text="Откуда забрать заказ:" Margin="0, 10, 0, 0" TextColor="White"/>
+                <Entry x:Name="WhriteStartAddress" Text="" Placeholder="Введите начальный адрес" TextColor="White"/>
+                <Label Text="Куда доставить заказ:" Margin="0, 10, 0, 0" TextColor="White"/>
+                <Entry x:Name="WhriteFinishAddress" Text="" Placeholder="Введите конечный адрес" TextColor="White"/>
+            </StackLayout>
+        </Frame>
+        <Button x:Name="SmallPackageButton" Text="Маленькая посылка" AbsoluteLayout.LayoutBounds="0.05, 0.43, 0.3, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="SmallPackageButton_Clicked"/>
+        <Button x:Name="AvaragePackageButton" Text="Средняя посылка" AbsoluteLayout.LayoutBounds="0.5, 0.43, 0.3, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="AvaragePackageButton_Clicked"/>
+        <Button x:Name="BigPackageButton" Text="Большая посылка" AbsoluteLayout.LayoutBounds="0.95, 0.43, 0.3, 0.15" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="BigPackageButton_Clicked"/>
+        <Button x:Name="PlaceOrderButton" Text="Оформить заказ" AbsoluteLayout.LayoutBounds="0.5, 0.965, 0.9, 0.1" AbsoluteLayout.LayoutFlags="All"
+                CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="PlaceOrderButton_Clicked"/>
+        <Frame AbsoluteLayout.LayoutBounds="0.5, 0.77, 0.9, 0.31" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="20">
+            <StackLayout>
+                <Label Text="Здесь вы можете оставить  для доставщика комментарий к заказу:" FontSize="16" TextColor="White"/>
+                <Editor x:Name="CommentEditor" Text="" HeightRequest="100" Background="White"/>
+                <Label x:Name="OrderCost" Text="Стоимость заказа: " FontSize="16" TextColor="White" Margin="0, 20, 0, 0"/>
+            </StackLayout>
+        </Frame>
+
+    </AbsoluteLayout>
+</ContentPage>
