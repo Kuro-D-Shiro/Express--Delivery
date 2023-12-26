@@ -49,6 +49,7 @@ namespace BruhMobilApp.View
             StartAdress.Text += package.StartAddres;
             FinishAdress.Text += package.EndAddres;
             CustomersComment.Text += package.Comment;
+            PackageSize.Text += package.Size;
         }
     }
 }

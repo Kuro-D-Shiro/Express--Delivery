@@ -36,9 +36,9 @@
                                         <Label>
                                             <Label.FormattedText>
                                                 <FormattedString>
-                                                    <Span Text="{Binding StartAddres}" FontSize="20" TextColor="Black"/>
-                                                    <Span Text=" - " FontSize="20" TextColor="Black"/>
-                                                    <Span Text="{Binding EndAddres}" FontSize="20" TextColor="Black"/>
+                                                    <Span Text="{Binding StartAddres}" FontSize="20" TextColor="White"/>
+                                                    <Span Text=" - " FontSize="20" TextColor="White"/>
+                                                    <Span Text="{Binding EndAddres}" FontSize="20" TextColor="White"/>
                                                 </FormattedString>
                                             </Label.FormattedText>
                                         </Label>

@@ -8,6 +8,7 @@
                 <Label x:Name="StartAdress" Text="Откуда: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
                 <Label x:Name="FinishAdress" Text="Куда: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
                 <Label x:Name="RemainingTime_Deliveryman" Text="Времени осталось: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                <Label x:Name="PackageSize" Text="Размер посылки: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
                 <Label Text="Комментарий заказчика: " FontSize="20" TextColor="White" Margin="0, 20, 0, 0"/>
                 <Frame HeightRequest="100" CornerRadius="20">
                     <ScrollView>
