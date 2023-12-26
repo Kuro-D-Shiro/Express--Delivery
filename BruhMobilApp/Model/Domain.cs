@@ -96,6 +96,13 @@ namespace BruhMobilApp.Model
         {
             Packages = packages;
         }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as User;
+            return ((other.Id == Id) && (other.Name == Name) && (other.Email == Email)
+                && (other.Password == Password) && (other.Role == Role));
+        }
     }
 
     public class Deliverman : User
@@ -236,6 +243,13 @@ namespace BruhMobilApp.Model
 
             Cost = distanceInMeters * sizeFactor[Size];
             return Cost;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as Package;
+            return ((other.Id == Id) && (other.StartAddres == StartAddres) && (other.EndAddres == EndAddres) &&
+                (other.Comment == Comment) && (other.Cost == Cost) && (other.Size == Size) && (other.Time == Time) && (other.Status == Status));
         }
     }
 }
