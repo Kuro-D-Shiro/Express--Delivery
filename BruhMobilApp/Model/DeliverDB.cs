@@ -396,6 +396,33 @@ namespace BruhMobilApp
             command.ExecuteNonQuery();
         }
 
+        public List<Package> GetStatusPackage(string status = "wait")
+        {
+            var packages = new List<Package>();
+
+            var command = new MySqlCommand("SELECT * FROM `Package` WHERE `status` = @status", connection);
+            var adapter = new MySqlDataAdapter();
+            var table = new DataTable();
+
+            command.Parameters.Add("@status", MySqlDbType.VarChar).Value = status;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count == 0)
+            {
+                return new List<Package>();
+            }
+            foreach (var objrow in table.Rows)
+            {
+                var packageData = new Dictionary<string, string>();
+                var row = (DataRow)objrow;
+                var id = row.ItemArray[0].ToString();
+                var package = GetPackage(int.Parse(row.ItemArray[0].ToString()));
+                packages.Add(package);
+            }
+
+            return packages;
+        }
     }
 
 }
