@@ -72,7 +72,7 @@ namespace BruhMobilApp.View
                 Package.StartAddres = WhriteStartAddress.Text;
                 Package.EndAddres = WhriteFinishAddress.Text;
                 Package.Comment = CommentEditor.Text;
-                deliverDB.AddPackege(Package);
+                //deliverDB.AddPackege(Package);
                 deliverDB.closeConnection();
                 await Navigation.PushModalAsync(new Customer_WaitingForDelivery());
             }
