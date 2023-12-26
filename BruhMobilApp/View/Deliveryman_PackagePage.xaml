@@ -8,6 +8,7 @@
                 <Label x:Name="StartAdress" Text="Откуда: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
                 <Label x:Name="FinishAdress" Text="Куда: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
                 <Label x:Name="RemainingTime_Deliveryman" Text="Времени осталось: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
+                <Label x:Name="PackageSize" Text="Размер посылки: " FontSize="20" FontAttributes="Bold" TextColor="White"/>
                 <Label Text="Комментарий заказчика: " FontSize="20" TextColor="White" Margin="0, 20, 0, 0"/>
                 <Frame HeightRequest="100" CornerRadius="20">
                     <ScrollView>
@@ -22,7 +23,7 @@
                 CornerRadius="20" BackgroundColor="#008080" TextColor="White" Clicked="MapButton_Clicked"/>
         <StackLayout AbsoluteLayout.LayoutBounds="0.5, 0.74, 0.9, 0.15" AbsoluteLayout.LayoutFlags="All" Margin="0, 20, 0, 0" >
             <Label Text="Номер заказчика:" TextColor="Black"  FontSize="25"/>
-            <Label Text="88005553535" TextColor="Black" FontSize="25"/>
+            <Label x:Name="CustomersNumber" Text="88005553535" TextColor="Black" FontSize="25"/>
         </StackLayout>
         <Button x:Name="CopyCustomerPhoneNumberButton" Text="📄" FontSize="40" AbsoluteLayout.LayoutBounds="0.9, 0.74, 0.3, 0.15" AbsoluteLayout.LayoutFlags="All"
                 CornerRadius="20" BackgroundColor="#008080" Clicked="CopyCustomerPhoneNumberButton_Clicked"/>

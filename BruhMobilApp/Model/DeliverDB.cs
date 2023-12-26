@@ -185,7 +185,7 @@ namespace BruhMobilApp
 
             if (!CheckUser(name))
             {
-                throw new Exception("Cant find a user in DataBase");
+                throw new Exception("Cant find a package in DataBase");
             }
             else
             {

@@ -24,9 +24,10 @@ namespace BruhMobilApp.View
             await Browser.OpenAsync(uri);
         }
 
-        private void CopyDeliverymansPhoneNumberButton_Clicked(object sender, EventArgs e)
+        private async void CopyDeliverymansPhoneNumberButton_Clicked(object sender, EventArgs e)
         {
-
+            await DisplayAlert("Уведомление.", "Номер скопирован в буфер обмена.", "ОК");
+            await Clipboard.SetTextAsync(DelivermansNumber.Text);
         }
     }
 }

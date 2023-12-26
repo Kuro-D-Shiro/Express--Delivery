@@ -29,9 +29,10 @@ namespace BruhMobilApp.View
             await Navigation.PushModalAsync(new GoodJobPage());
         }
 
-        private void CopyCustomerPhoneNumberButton_Clicked(object sender, EventArgs e)
+        private async void CopyCustomerPhoneNumberButton_Clicked(object sender, EventArgs e)
         {
-
+            await DisplayAlert("Уведомление.", "Номер скопирован в буфер обмена.", "ОК");
+            await Clipboard.SetTextAsync(CustomersNumber.Text);
         }
 
         private async void TPButton_Clicked(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace BruhMobilApp.View
             StartAdress.Text += package.StartAddres;
             FinishAdress.Text += package.EndAddres;
             CustomersComment.Text += package.Comment;
+            PackageSize.Text += package.Size;
         }
     }
 }
