@@ -9,7 +9,7 @@
                AbsoluteLayout.LayoutBounds="0.5, 0.2, 0.7, 0.3" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center"/>
         <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.7, 0.35" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#008080" CornerRadius="50">
             <StackLayout>
-                <Entry x:Name="LiginingUsersName" IsPassword="False" Placeholder="Введите имя пользователя" TextColor="White"/>
+                <Entry x:Name="LoginingUsersName" IsPassword="False" Placeholder="Введите имя пользователя" TextColor="White"/>
                 <Entry x:Name="LoginingPassword" IsPassword="True" Placeholder="Введите пароль" TextColor="White"/>
                 <Button x:Name="LogInButton" Text="Войти" CornerRadius="20" Clicked="LogInButton_Clicked"/>
                 <Label Text="Нет учётной записи?" TextColor="White" FontSize="14"/>
