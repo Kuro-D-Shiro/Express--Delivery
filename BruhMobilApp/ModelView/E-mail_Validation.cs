@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace BruhMobilApp.ModelView
 {
-    internal class E_Mail_Validation : Behavior<Entry>
+    public class E_Mail_Validation : Behavior<Entry>
     {
         protected override void OnAttachedTo(Entry bindable)
         {
@@ -20,7 +20,7 @@ namespace BruhMobilApp.ModelView
             base.OnDetachingFrom(bindable);
         }
 
-        void OnEntryTextChange(object sender, TextChangedEventArgs e)
+        public void OnEntryTextChange(object sender, TextChangedEventArgs e)
         {
             string str = e.NewTextValue;
 
