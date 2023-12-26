@@ -168,7 +168,7 @@ namespace BruhMobilApp
             }
             else
             {
-                throw new Exception("Cant find a User in DataBase");
+                throw new Exception("Cant find a user in DataBase");
             }
             return user;
         }
@@ -185,7 +185,7 @@ namespace BruhMobilApp
 
             if (!CheckUser(name))
             {
-                throw new Exception("Cant find a package in DataBase");
+                throw new Exception("Cant find a user in DataBase");
             }
             else
             {
@@ -236,7 +236,7 @@ namespace BruhMobilApp
             adapter.Fill(table);
             if (table.Rows.Count == 0)
             {
-                throw new Exception("Cant find a package in DataBase");
+                return new List<Package>();
             }
             foreach (var objrow in table.Rows)
             {
@@ -262,7 +262,7 @@ namespace BruhMobilApp
             return table.Rows.Count != 0;
         }
 
-        private void AddPackege(Package package)
+        public void AddPackege(Package package)
         {
             var SQLCommand = "INSERT INTO `Package` (`startAdress`, `endAdress`, `size`, `comment`, `time`, `cost`, `status`) VALUES (@startAdres, @endAdres, @size, @comment, @time, @cost, @status)";
             var command = new MySqlCommand(SQLCommand, connection);
@@ -294,7 +294,7 @@ namespace BruhMobilApp
         {
             if (!CheckPackage(id))
             {
-                throw new Exception("Cant find a user in DataBase");
+                throw new Exception("Cant find a package in DataBase");
             }
             else
             {
